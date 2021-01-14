@@ -4,15 +4,14 @@ pub struct Token {
     value: String,
 }
 
+#[derive(Debug, Clone)]
 pub enum Tokens {
     LParens,
     RParens,
     RBrace,
     LBrace,
-}
 
-fn main() {
-    println!("Hello World!");
+    
 }
 
 pub fn lex(file: String) {
