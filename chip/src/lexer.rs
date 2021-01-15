@@ -4,7 +4,6 @@ pub struct Token {
     value: String,
 }
 
-pub
 
 /*
 helloWorld := fn() {
@@ -26,11 +25,15 @@ pub enum Tokens {
 
     FUNCTION,
 
+    INITIALIZE,
     ASSIGN,
 
     PRINTLN,
 }
 
 pub fn lex(file: String) {
+    while true {
+        
+    }
     println("{}", file);
 }

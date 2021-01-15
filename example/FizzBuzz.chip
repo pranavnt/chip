@@ -1,5 +1,5 @@
 /*
- * Otter code to solve FizzBuzz
+ * Chip code to solve FizzBuzz
 */
 
 import (
@@ -22,4 +22,3 @@ fizzBuzz := fn(max) {
 }
 
 fizzBuzz(100)
-fizzBuzz()

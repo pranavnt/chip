@@ -1,0 +1,5 @@
+helloWorld := fn() {
+    println("Hello world");
+}
+
+helloWorld();
