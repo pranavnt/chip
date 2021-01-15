@@ -4,16 +4,33 @@ pub struct Token {
     value: String,
 }
 
+pub
+
+/*
+helloWorld := fn() {
+    println("Hello world");
+}
+
+helloWorld();
+*/
+
 #[derive(Debug, Clone)]
 pub enum Tokens {
-    LParens,
-    RParens,
-    RBrace,
-    LBrace,
+    L_PARENS,
+    R_PARENS,
+    R_BRACE,
+    L_BRACE,
 
-    
+    STRING,
+    INT,
+
+    FUNCTION,
+
+    ASSIGN,
+
+    PRINTLN,
 }
 
 pub fn lex(file: String) {
-    println!("{}", file);
+    println("{}", file);
 }
