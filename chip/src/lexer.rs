@@ -32,8 +32,8 @@ pub enum Tokens {
 }
 
 pub fn lex(file: String) {
-    while true {
-        
+
+    for current_char in file.chars()  {
+        print!("{}",current_char);
     }
-    println("{}", file);
 }
