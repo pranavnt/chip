@@ -13,7 +13,25 @@ helloWorld := fn() {
 helloWorld();
 */
 
-#[derive(Debug, Clone)]
+
+// parens/braces/backets
+let L_PARENS = "L_PARENS";
+let R_PARENS = "R_PARENS"; 
+let L_BRACE = "L_BRACE";
+let R_BRACE = "R_BRACE";
+let L_SBRACKET = "L_BRACKET";
+let R_BRACKET = "R_BRACKET"; 
+
+// comparison operators
+let EQUAL_OPERATOR = "EQUAL_OPERATOR";
+let NOT_EQUAL_OPERATOR = "NOT_EQUAL_OPERATOR";
+let GREATER_THAN_OPERATOR = "GREATER_THAN_OPERATOR";
+let LESS_THAN_OPERATOR = "LESS_THAN_OPERATOR";
+let GREATER_THAN_EQUAL_OPERATOR = "GREATER_THAN_EQUAL_OPERATOR";
+let LESS_THAN_EQUAL_OPERATOR = "LESS_THAN_EQUAL_OPERATOR";
+
+
+
 pub enum Tokens {
     L_PARENS,
     R_PARENS,
@@ -31,13 +49,15 @@ pub enum Tokens {
     PRINTLN,
 }
 
-
-pub trait Lexer {
+struct lexer {
     text,
     pos,
     current_char,
 }
 
+impl Lexer for lexer {
+    
+}
 
 pub fn lex(file: String) {
 
