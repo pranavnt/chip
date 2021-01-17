@@ -31,9 +31,21 @@ pub enum Tokens {
     PRINTLN,
 }
 
+
+pub trait Lexer {
+    text,
+    pos,
+    current_char,
+}
+
+
 pub fn lex(file: String) {
 
     for current_char in file.chars()  {
+        if current_char.is_numeric() {
+            println!("{}",current_char);
+        }
         print!("{}",current_char);
+        
     }
 }
