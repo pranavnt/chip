@@ -11,11 +11,13 @@ fn main() {
 
         let file = fs::read_to_string(file_name).expect("Couldn't read from file");
 
-        let newLexer = lexer::Lexer {
+        let mut newLexer = lexer::Lexer {
             code: file,
             current_char: "".to_string(),
             pos: 0,
         };
+
+        newLexer.lex()
     } else {
         println!("Too many arguments")
     }

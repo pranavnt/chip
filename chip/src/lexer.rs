@@ -64,20 +64,17 @@ pub struct Lexer {
 }
 
 impl Lexer {
-    fn lex() {}
-
-    fn read_line() {}
-
-    fn consume_char() {}
-
-    fn get_char(&mut self, n: i32) {}
-}
-
-pub fn lex(file: String) {
-    for current_char in file.chars() {
-        if current_char.is_numeric() {
-            println!("{}", current_char);
+    pub fn lex(&mut self) {
+        // break up into lines
+        let mut lines = self.code.split(";");
+        for line in lines {
+            println!("{}",line);
         }
-        print!("{}", current_char);
     }
+
+    pub fn read_line() {}
+
+    pub fn consume_char() {}
+
+    pub fn get_char(&mut self, n: i32) {}
 }
