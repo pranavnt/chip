@@ -59,14 +59,25 @@ pub struct Token {
 
 #[derive(Debug, Clone)]
 pub struct Lexer {
-    text: String,
+    code: String,
     pos: i32,
     current_char: String,
 }
 
 impl Lexer {
-    
-    fn read_char() {
+    fn lex() {
+        
+    }
+
+    fn read_line() {
+        
+    }
+
+    fn consume_char() {
+        
+    }
+
+    fn get_char(&mut self, n: i32) {
         
     }
 }
