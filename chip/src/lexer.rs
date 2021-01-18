@@ -66,15 +66,15 @@ pub struct Lexer {
 impl Lexer {
     pub fn lex(&mut self) {
         // break up into lines
-        let mut lines = self.code.split(";");
-        for line in lines {
-            println!("{}",line);
-        }
+        let lines = self.code.split(";");
     }
 
-    pub fn read_line() {}
+    pub fn read_line() {
+        println!("hi")
+    }
 
     pub fn consume_char() {}
 
     pub fn get_char(&mut self, n: i32) {}
+
 }
