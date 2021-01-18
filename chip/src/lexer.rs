@@ -1,8 +1,3 @@
-pub struct Token {
-    token_type: String,
-    value: String,
-}
-
 /*
 helloWorld := fn() {
     println("Hello world");
@@ -56,6 +51,12 @@ const WHILE_LOOP: &str = "WHILE_LOOP";
 const FUNCTION: &str = "FUNCTION";
 const RETURN: &str = "RETURN";
 
+pub struct Token {
+    token_type: String,
+    value: String
+}
+
+
 #[derive(Debug, Clone)]
 pub struct Lexer {
     text: String,
@@ -64,8 +65,9 @@ pub struct Lexer {
 }
 
 impl Lexer {
-    fn print() {
-        println!("Hi");
+    
+    fn read_char() {
+        
     }
 }
 
