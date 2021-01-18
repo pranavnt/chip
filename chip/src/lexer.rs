@@ -53,33 +53,24 @@ const RETURN: &str = "RETURN";
 
 pub struct Token {
     token_type: String,
-    value: String
+    value: String,
 }
-
 
 #[derive(Debug, Clone)]
 pub struct Lexer {
-    code: String,
-    pos: i32,
-    current_char: String,
+    pub code: String,
+    pub pos: i32,
+    pub current_char: String,
 }
 
 impl Lexer {
-    fn lex() {
-        
-    }
+    fn lex() {}
 
-    fn read_line() {
-        
-    }
+    fn read_line() {}
 
-    fn consume_char() {
-        
-    }
+    fn consume_char() {}
 
-    fn get_char(&mut self, n: i32) {
-        
-    }
+    fn get_char(&mut self, n: i32) {}
 }
 
 pub fn lex(file: String) {
