@@ -18,7 +18,7 @@ fn main() {
         };
 
         newLexer.lex()
-    } else {
-        println!("Too many arguments")
+    } else if args.len() == 1 {
+        println!("Welcome to Chip!!");
     }
 }
