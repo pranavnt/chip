@@ -67,6 +67,11 @@ impl Lexer {
     pub fn lex(&mut self) {
         // break up into lines
         let lines = self.code.split(";");
+        let chars: Vec<char> = self.code.chars().collect();
+
+        for character in chars {
+            println!("{}",character);
+        }
     }
 
     pub fn read_line() {
