@@ -1,5 +1,6 @@
 use std::env;
 use std::fs;
+use std::vec;
 
 mod lexer;
 
@@ -14,6 +15,7 @@ fn main() {
         let mut newLexer = lexer::Lexer {
             code: file,
             current_char: "".to_string(),
+            chars:Vec::new(),
             pos: 0,
         };
 

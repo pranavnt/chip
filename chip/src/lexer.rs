@@ -60,6 +60,7 @@ pub struct Token {
 pub struct Lexer {
     pub code: String,
     pub pos: i32,
+    pub chars: Vec<char>,
     pub current_char: String,
 }
 
@@ -67,14 +68,14 @@ impl Lexer {
     pub fn lex(&mut self) {
         // break up into lines
         let lines = self.code.split(";");
-        let chars: Vec<char> = self.code.chars().collect();
+        self.chars = self.code.chars().collect();
 
-        println!("{}", chars.len());
+        println!("{}", self.chars.len());
 
-        while self.pos < (chars.len() as i32 -1) {
-            println!("{}",chars.get(self.pos as usize).unwrap());
+        while self.pos < (self.chars.len() as i32 - 1) {
+            println!("{}",self.chars.get(self.pos as usize).unwrap());
             self.pos += 1;
-            self.current_char = chars.get(self.pos as usize).unwrap().to_string();
+            self.current_char = self.chars.get(self.pos as usize).unwrap().to_string();
             println!("{}",self.current_char);
         }
     }
