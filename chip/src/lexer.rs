@@ -66,8 +66,6 @@ pub struct Lexer {
 
 impl Lexer {
     pub fn lex(&mut self) {
-        // break up into lines
-        let lines = self.code.split(";");
         self.chars = self.code.chars().collect();
 
         println!("{}", self.chars.len());
@@ -78,6 +76,8 @@ impl Lexer {
             self.current_char = self.chars.get(self.pos as usize).unwrap().to_string();
             println!("{}",self.current_char);
         }
+
+        println!("{}", self.get_char(1));
     }
     
 
@@ -89,6 +89,8 @@ impl Lexer {
         
     }
 
-    pub fn get_char(&mut self, n: i32) {}
+    pub fn get_char(&mut self, n: i32) -> String {
+        return self.chars.get((self.pos-1+n) as usize).unwrap().to_string()
+    }
 
 }
