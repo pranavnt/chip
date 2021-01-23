@@ -17,6 +17,7 @@ fn main() {
             current_char: "".to_string(),
             chars:Vec::new(),
             pos: 0,
+            tokens: Vec::new()
         };
 
         newLexer.lex()

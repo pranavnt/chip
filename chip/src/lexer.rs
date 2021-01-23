@@ -51,6 +51,7 @@ const WHILE_LOOP: &str = "WHILE_LOOP";
 const FUNCTION: &str = "FUNCTION";
 const RETURN: &str = "RETURN";
 
+#[derive(Debug, Clone)]
 pub struct Token {
     token_type: String,
     value: String,
@@ -62,6 +63,7 @@ pub struct Lexer {
     pub pos: i32,
     pub chars: Vec<char>,
     pub current_char: String,
+    pub tokens: Vec<Token>
 }
 
 impl Lexer {
