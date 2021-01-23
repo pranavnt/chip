@@ -68,24 +68,25 @@ impl Lexer {
         // break up into lines
         let lines = self.code.split(";");
         let chars: Vec<char> = self.code.chars().collect();
-    
+
         println!("{}", chars.len());
 
-        while self.pos < chars.len() as i32 {
-            self.pos += 1;
+        while self.pos < (chars.len() as i32 -1) {
             println!("{}",chars.get(self.pos as usize).unwrap());
-        }
-
-        for character in chars {
-            println!("{}",character);
+            self.pos += 1;
+            self.current_char = chars.get(self.pos as usize).unwrap().to_string();
+            println!("{}",self.current_char);
         }
     }
+    
 
     pub fn read_line() {
         println!("hi")
     }
 
-    pub fn consume_char() {}
+    pub fn consume_char() {
+        
+    }
 
     pub fn get_char(&mut self, n: i32) {}
 
