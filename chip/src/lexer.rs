@@ -74,7 +74,8 @@ impl Lexer {
             println!("{}",self.chars.get(self.pos as usize).unwrap());
             self.pos += 1;
             self.current_char = self.chars.get(self.pos as usize).unwrap().to_string();
-            println!("{}",self.current_char);
+            
+            println!("{}", self.get_next_char());
         }
 
         println!("{}", self.get_char(1));
@@ -87,6 +88,10 @@ impl Lexer {
 
     pub fn consume_char() {
         
+    }
+
+    pub fn get_next_char(&mut self) -> String {
+        return self.get_char(1);
     }
 
     pub fn get_char(&mut self, n: i32) -> String {
