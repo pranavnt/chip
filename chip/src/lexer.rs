@@ -80,7 +80,6 @@ impl Lexer {
             println!("{}", self.get_next_char());
         }
 
-        println!("{}", self.get_char(1));
     }
     
 
@@ -97,7 +96,7 @@ impl Lexer {
     }
 
     pub fn get_char(&mut self, n: i32) -> String {
-        return self.chars.get((self.pos-1+n) as usize).unwrap().to_string()
+        return self.chars.get((self.pos+n) as usize).unwrap().to_string()
     }
 
 }
