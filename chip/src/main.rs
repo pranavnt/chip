@@ -15,9 +15,9 @@ fn main() {
         let mut newLexer = lexer::Lexer {
             code: file,
             current_char: "".to_string(),
-            chars:Vec::new(),
+            chars: Vec::new(),
             pos: 0,
-            tokens: Vec::new()
+            tokens: Vec::new(),
         };
 
         newLexer.lex()

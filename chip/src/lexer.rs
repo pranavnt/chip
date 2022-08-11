@@ -63,7 +63,7 @@ pub struct Lexer {
     pub pos: i32,
     pub chars: Vec<char>,
     pub current_char: String,
-    pub tokens: Vec<Token>
+    pub tokens: Vec<Token>,
 }
 
 impl Lexer {
@@ -73,30 +73,25 @@ impl Lexer {
         println!("{}", self.chars.len());
 
         while self.pos < (self.chars.len() as i32 - 1) {
-            println!("{}",self.chars.get(self.pos as usize).unwrap());
+            println!("{}", self.chars.get(self.pos as usize).unwrap());
             self.pos += 1;
             self.current_char = self.chars.get(self.pos as usize).unwrap().to_string();
-            
+
             println!("{}", self.get_next_char());
         }
-
     }
-    
 
     pub fn read_line() {
         println!("hi")
     }
 
-    pub fn consume_char() {
-        
-    }
+    pub fn consume_char() {}
 
     pub fn get_next_char(&mut self) -> String {
         return self.get_char(1);
     }
 
     pub fn get_char(&mut self, n: i32) -> String {
-        return self.chars.get((self.pos+n) as usize).unwrap().to_string()
+        return self.chars.get((self.pos + n) as usize).unwrap().to_string();
     }
-
 }
