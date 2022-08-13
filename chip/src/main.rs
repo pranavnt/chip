@@ -1,8 +1,8 @@
 use std::env;
 use std::fs;
-use std::vec;
 
 mod lexer;
+mod token;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -12,15 +12,14 @@ fn main() {
 
         let file = fs::read_to_string(file_name).expect("Couldn't read from file");
 
-        let mut newLexer = lexer::Lexer {
-            code: file,
-            current_char: "".to_string(),
-            chars: Vec::new(),
-            pos: 0,
-            tokens: Vec::new(),
-        };
+        let mut lexer = lexer::Lexer::new(file);
 
-        newLexer.lex()
+        lexer.lex();
+
+        for token in lexer.tokens {
+            println!("{{\n\ttoken_type: {},\n\ttoken: {}\n}}", token.token_type, token.value);
+        }
+
     } else if args.len() == 1 {
         println!("Welcome to Chip!!");
     }
